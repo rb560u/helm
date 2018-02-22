@@ -58,27 +58,27 @@ labels:
 images:
   tags:
     test: docker.io/kolla/ubuntu-source-rally:4.0.0
-    db_init: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    db_sync: docker.io/kolla/ubuntu-source-nova-api:3.0.3
-    db_drop: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_service: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_endpoints: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    api: docker.io/kolla/ubuntu-source-nova-api:3.0.3
-    conductor: docker.io/kolla/ubuntu-source-nova-conductor:3.0.3
-    scheduler: docker.io/kolla/ubuntu-source-nova-scheduler:3.0.3
-    novncproxy: docker.io/kolla/ubuntu-source-nova-novncproxy:3.0.3
+    db_init: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    db_sync: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    db_drop: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_user: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_service: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_endpoints: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    api: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    conductor: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    scheduler: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    novncproxy: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
     novncproxy_assets: docker.io/kolla/ubuntu-source-nova-novncproxy:3.0.3
     spiceproxy: docker.io/kolla/ubuntu-source-nova-spicehtml5proxy:3.0.3
     spiceproxy_assets: docker.io/kolla/ubuntu-source-nova-spicehtml5proxy:3.0.3
-    consoleauth: docker.io/kolla/ubuntu-source-nova-consoleauth:3.0.3
-    compute: docker.io/kolla/ubuntu-source-nova-compute:3.0.3
-    compute_ssh: docker.io/kolla/ubuntu-source-nova-ssh:3.0.3
-    compute_ironic: docker.io/kolla/ubuntu-source-nova-compute-ironic:3.0.3
-    placement: docker.io/kolla/ubuntu-source-nova-placement-api:3.0.3-beta.1
-    bootstrap: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
+    consoleauth: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    compute: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    compute_ssh: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    compute_ironic: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    placement: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
+    bootstrap: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.2.1
-    cell_setup: docker.io/kolla/ubuntu-source-nova-api:3.0.3
+    cell_setup: docker.io/135.25.13.186/docker-local/review/mos-nova_newton:main
   pull_policy: "IfNotPresent"
 
 bootstrap:
@@ -1085,7 +1085,7 @@ endpoints:
       default: mariadb
     host_fqdn_override:
       default: null
-    path: /nova_api_cell0
+    path: /nova_cell0
     scheme: mysql+pymysql
     port:
       mysql:
@@ -1302,7 +1302,7 @@ endpoints:
 pod:
   user:
     nova:
-      uid: 1000
+      uid: 42424
   affinity:
       anti:
         type:

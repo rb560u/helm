@@ -19,9 +19,9 @@
 
 images:
   tags:
-    db_init: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
+    db_init: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     horizon_db_sync: docker.io/kolla/ubuntu-source-horizon:ocata
-    db_drop: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
+    db_drop: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     horizon: docker.io/kolla/ubuntu-source-horizon:ocata
     dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.2.1
   pull_policy: "IfNotPresent"

@@ -8,6 +8,7 @@ Contents:
 
    endpoints
    images
+   image-building
    networking
    oslo-config
    pod-disruption-budgets

@@ -28,17 +28,17 @@ labels:
 
 images:
   tags:
-    bootstrap: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    db_init: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    heat_db_sync: docker.io/kolla/ubuntu-source-heat-api:3.0.3
-    db_drop: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_service: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    ks_endpoints: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    heat_api: docker.io/kolla/ubuntu-source-heat-api:3.0.3
-    heat_cfn: docker.io/kolla/ubuntu-source-heat-api:3.0.3
-    heat_cloudwatch: docker.io/kolla/ubuntu-source-heat-api:3.0.3
-    heat_engine: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
+    bootstrap: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    db_init: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    heat_db_sync: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    db_drop: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_user: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_service: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    ks_endpoints: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    heat_api: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    heat_cfn: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    heat_cloudwatch: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    heat_engine: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.2.1
   pull_policy: "IfNotPresent"
 
@@ -493,7 +493,7 @@ endpoints:
 pod:
   user:
     heat:
-      uid: 1000
+      uid: 42424
   affinity:
       anti:
         type:

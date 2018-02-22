@@ -25,17 +25,17 @@ release_group: null
 
 images:
   tags:
-    keystone_bootstrap: docker.io/kolla/ubuntu-source-keystone:3.0.3
+    keystone_bootstrap: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     test: docker.io/kolla/ubuntu-source-rally:4.0.0
-    db_init: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    keystone_db_sync: docker.io/kolla/ubuntu-source-keystone:3.0.3
-    db_drop: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
+    db_init: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
+    keystone_db_sync: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
+    db_drop: docker.io/135.25.13.186/docker-local/review/mos-heat_newton:main
     ks_user: docker.io/kolla/ubuntu-source-heat-engine:3.0.3
-    keystone_fernet_setup: docker.io/kolla/ubuntu-source-keystone:3.0.3
-    keystone_fernet_rotate: docker.io/kolla/ubuntu-source-keystone:3.0.3
-    keystone_credential_setup: docker.io/kolla/ubuntu-source-keystone:3.0.3
-    keystone_credential_rotate: docker.io/kolla/ubuntu-source-keystone:3.0.3
-    keystone_api: docker.io/kolla/ubuntu-source-keystone:3.0.3
+    keystone_fernet_setup: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
+    keystone_fernet_rotate: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
+    keystone_credential_setup: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
+    keystone_credential_rotate: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
+    keystone_api: docker.io/135.25.13.186/docker-local/review/mos-keystone_newton:main
     dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.2.1
   pull_policy: "IfNotPresent"
 
